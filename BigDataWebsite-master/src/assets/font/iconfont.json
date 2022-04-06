@@ -1,0 +1,44 @@
+{
+  "id": "3247353",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4217040",
+      "name": "柱状图",
+      "font_class": "zhuzhuangtu",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "7121080",
+      "name": "大数据服务平台",
+      "font_class": "dashujufuwupingtai",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "15552983",
+      "name": "大数据",
+      "font_class": "dashuju",
+      "unicode": "e691",
+      "unicode_decimal": 59025
+    },
+    {
+      "icon_id": "15726751",
+      "name": "大数据",
+      "font_class": "dashuju1",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "18224411",
+      "name": "大数据",
+      "font_class": "dashuju2",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    }
+  ]
+}
