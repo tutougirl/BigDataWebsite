@@ -90,7 +90,6 @@
 			padding-bottom: 10px;
 			text-align: center;
 		}
-		
 		.text-min {
 			font-size: 12px;
 			text-align: center;
@@ -117,6 +116,7 @@
 		}
 		.merit-text{
 			padding: 25px 25px;
+			width: 100%;
 		}
 	}
 
@@ -131,9 +131,7 @@
 			font-size: 15px;
 			text-align: center;
 		}
-		.merit-text {
-			width: 60%;
-		}
+	
 		.merit-item {
 			padding-top: 20px;
 			width: 100%;

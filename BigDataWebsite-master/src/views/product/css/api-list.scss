@@ -1,37 +1,71 @@
 @import "var.scss";
 @import "global.scss";
 
-.api-list {
-  margin: 30px 150px;
-  margin-top: 0;
-  // padding-top: $header-height;
-  padding-bottom: 50px;
-  // min-width: 800px;
-  background-color: $color-white;
-}
+	@media screen and (max-width:1000px) {
+		.api-list {
+		  // margin: 10px 100px;
+		  margin-top: 0;
+		  // padding-top: $header-height;
+		  padding-bottom: 50px;
+		  // min-width: 800px;
+		  background-color: $color-white;
+		}
+		
+		.api-list-header {
+		  width: 100%;
+		  padding: 0 40px;
+		  li {
+		    display: inline-block;
+		    line-height: 15px;
+		    margin: 0px 15px 5px 15px;
+		    font-size: 12px;
+		    font-weight: 400;
+		    color: $color-grey;
+		    border-bottom: none;
+		    cursor: pointer;
+		  }
+		  li.active {
+		    color: $color-black;
+		    font-weight: 600;
+		    border-bottom: 4px solid $color-black;
+		  }
+		}
+	}
+	
+	@media screen and (min-width:1000px) {
+		.api-list {
+		  margin: 30px 150px;
+		  margin-top: 0;
+		  // padding-top: $header-height;
+		  padding-bottom: 50px;
+		  // min-width: 800px;
+		  background-color: $color-white;
+		}
+		
+		.api-list-header {
+		  width: 100%;
+		  padding: 0 40px;
+		  li {
+		    display: inline-block;
+		    line-height: 40px;
+		    margin: 40px 20px 15px 10px;
+		    font-size: 18px;
+		    font-weight: 400;
+		    color: $color-grey;
+		    border-bottom: none;
+		    cursor: pointer;
+		  }
+		  li.active {
+		    color: $color-black;
+		    font-weight: 600;
+		    border-bottom: 4px solid $color-black;
+		  }
+		}
+		
+		.pagination {
+		  @include layout(center);
+		  transform: translateY(15px);
+			margin-top: 50px;
+		}
+	}
 
-.api-list-header {
-  width: 100%;
-  padding: 0 40px;
-  li {
-    display: inline-block;
-    line-height: 40px;
-    margin: 40px 20px 15px 10px;
-    font-size: 18px;
-    font-weight: 400;
-    color: $color-grey;
-    border-bottom: none;
-    cursor: pointer;
-  }
-  li.active {
-    color: $color-black;
-    font-weight: 600;
-    border-bottom: 4px solid $color-black;
-  }
-}
-
-.pagination {
-  @include layout(center);
-  transform: translateY(15px);
-	margin-top: 50px;
-}

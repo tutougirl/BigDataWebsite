@@ -48,7 +48,7 @@
 
 <script>
 	
-	import PageHeader from 'components/pageHeader/PageHeader1.vue'
+	import PageHeader from 'components/pageHeader/PageHeader.vue'
 	import PageFooter from 'components/pageFooter/PageFooter.vue'
 	import AdvantageItem from 'views/home/childComponents/AdvantageItem1.vue'
 	import ContentList from'./ContentList.vue'
@@ -70,11 +70,11 @@
 				tabPosition: 'left',
 				chineseText: "产品中心，一站式数据集合",
 				apiStyle:  [{name: '全部',type: 0},
-										{name: '云上贵州数据资源',type: 1},
-										{name: '智慧招商平台数据',type: 2},
-										{name: '银联金融信用数据',type: 3},
-										{name: '空间地理信息数据',type: 4},
-										{name: '水电气等数据',type: 5},],
+										{name: '云上贵州',type: 1},
+										{name: '智慧招商',type: 2},
+										{name: '银联金融',type: 3},
+										{name: '空间地理',type: 4},
+										{name: '水电气等',type: 5},],
 				activeName: '全部',
 				pageSize: 15, // 页数
 				currentPage: 1, // 当前页
@@ -127,19 +127,19 @@
 										{name: '企业信息综合评估',type: '5-7',img:'企6.png'},
 										{name: '企业经营凭证核验',type: '5-8',img:'企11.png'},
 										{name: '企业基础信息核验',type: '5-9',img:'企10.png'},]
-			  } else if(name === '云上贵州数据资源'){
+			  } else if(name === '云上贵州'){
 					this.albumDatas=[{name: '人脸对比',type: '1-1',img:'人脸1.png'},
 													{name: '认证宝',type: '1-2',img:'公安1.png'},
 													{name: '身份证OCR识别',type: '1-3',img:'公安2.png'},]
-			  }else if(name === '水电气等数据'){
+			  }else if(name === '水电气等'){
 					this.albumDatas=[{name: '全网手机二要素验证',type: '2-1',img:'手机1.png'},
 													{name: '全网手机三要素验证',type: '2-2',img:'手机2.png'},
 													{name: '全网手机状态验证',type: '2-3',img:'运1.png'},]
-			  }else if(name === '银联金融信用数据'){
+			  }else if(name === '银联金融'){
 					this.albumDatas=[{name: '银行二要素验证',type: '3-1',img:'银行1.png'},
 													{name: '银行三要素验证',type: '3-2',img:'银行2.png'},
 													{name: '银行四要素验证',type: '3-3',img:'银行3.png'},]
-			  }else if(name === '空间地理信息数据'){
+			  }else if(name === '空间地理'){
 					this.albumDatas=[{name: '道路运输从业人员资格证核验V3',type: '4-1',img:'交通1.png'},
 													{name: '道路运输许可证核验V2',type: '4-2',img:'交通2.png'},
 													{name: '企业道路运输经营许可证核验V2',type: '4-3',img:'交通6.png'},

@@ -168,19 +168,19 @@
 	
 	@-webkit-keyframes bg-color {
 		0% {
-			background-color: rgba(4 210 200, 0.0);
+			background-color: #313645;
 		}
 		20% {
-			background-color: rgba(4 210 200, 0.2);
+			background-color: #313645;
 		}
 		40% {
-			background-color: rgba(4 210 200, 0.4);
+			background-color: #313645;
 		}
 		60% {
-			background-color: rgba(4 210 200, 0.6);
+			background-color: #313645;
 		}
 		80% {
-			background-color: rgba(4 210 200, 0.8);
+			background-color: #313645;
 		}
 		100% {
 			background-color: #313645;

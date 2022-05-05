@@ -12,17 +12,20 @@
 						    <use :xlink:href="Click"></use>
 						  </svg>
 						</div>
-						<el-dialog
-						  title="消息"
-						  :visible.sync="dialogVisible"
-							style="margin-top: 5%;"
-						  width="30%">
-						  <span>您好，API购买需线下咨询，联系方式：1XXXXXXXXXX</span>
-						  <span slot="footer" class="dialog-footer">
-						    <el-button @click="dialogVisible = false">取 消</el-button>
-						    <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
-						  </span>
-						</el-dialog>
+						<div>
+							<el-dialog
+								class="dialog"
+								title="消息"
+								:visible.sync="dialogVisible"
+								>
+								<span class="text">您好，API购买需线下咨询，联系方式：1XXXXXXXXXX</span>
+								<span slot="footer" class="dialog-footer">
+									<el-button class="buttonsize" @click="dialogVisible = false">取 消</el-button>
+									<el-button  type="primary" @click="dialogVisible = false">确 定</el-button>
+								</span>
+							</el-dialog>
+						</div>
+
 					<!-- </el-card> -->
         </div>
         
@@ -54,6 +57,25 @@ export default {
   }
 }
 </script>
+
+<style scoped="scoped">
+	@media screen and (max-width:1000px) {		
+		.text{
+			font-size: 12px;
+		}
+		.dialog-footer{
+			margin: -100px 0px 0px 0px;
+		}
+		.buttonsize{
+			display: none;
+		}
+	}
+	@media screen and (min-width:1000px) {
+		.dialog{
+			margin-top: 5%;
+		}
+	}
+</style>
 
 <style lang="scss" scoped src='./css/content-list.scss'>
 </style>

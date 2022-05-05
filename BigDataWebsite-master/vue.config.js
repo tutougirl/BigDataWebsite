@@ -2,7 +2,7 @@
  * @Author: he yan ying
  * @Date: 2022-01-10 11:28:13
  * @LastEditors: he yan ying
- * @LastEditTime: 2022-03-15 14:40:03
+ * @LastEditTime: 2022-01-17 21:26:01
  * @Description: 
  */
 module.exports = {
@@ -10,7 +10,6 @@ module.exports = {
 	configureWebpack: {
 		resolve: {
 			alias: {
-				'src':'@',
 				'assets': '@/assets',
 				'common': '@/common',
 				'components': '@/components',

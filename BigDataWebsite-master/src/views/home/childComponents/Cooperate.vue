@@ -2,7 +2,7 @@
  * @Author: he yan ying
  * @Date: 2021-11-23 16:19:47
  * @LastEditors: he yan ying
- * @LastEditTime: 2022-03-18 14:00:00
+ * @LastEditTime: 2022-05-05 16:03:56
  * @Description: 
 -->
 <template>
@@ -22,8 +22,8 @@
 					<img src="~assets/img/home/guiyangshi.png" />
 					<img src="~assets/img/home/jianshe.png" />
 					<img src="~assets/img/home/ruanjiansuo.png" />
-				</div>
-				<div class="cooperate-item">			
+				<!-- </div>
+				<div class="cooperate-item">			 -->
 					<img src="~assets/img/home/tuzhi.png" />
 					<img src="~assets/img/home/yihualu.png" />
 					<img src="~assets/img/home/yinlian.png" />
@@ -58,21 +58,28 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	
 	@media screen and (max-width:1000px) {
-		.cooperate-list{
-			overflow: hidden;
-			overflow: scroll;
-		}
+	
 		.cooperate-item{
-			padding: 0 !important;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			height: 300px;
+			overflow:scroll;
+		}
+		img{
+			padding: 10px;
 		}
 	}
 	
 	@media screen and (min-width:1000px) {
 		.cooperate-item{
 			padding: 50px 0;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
 		}
 	}
 	

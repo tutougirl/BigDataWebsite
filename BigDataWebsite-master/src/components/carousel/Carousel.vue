@@ -16,7 +16,7 @@
 					</div> -->
 				</div>
 				<!-- <img src="~assets/img/bg-1.jpg" /> -->
-				<img :src="item.srcc" />
+				<img :src="item.srcc" class="carousel-img"/>
 			</el-carousel-item>
 		</el-carousel>
 	</div>
@@ -49,7 +49,9 @@
 		},
 		methods: {
 			changeFixed(clientHeight) { // 动态修改样式
+			console.log(clientHeight)
 				this.$refs.homePage.style.height = clientHeight + 'px';
+				console.log(this.$refs.homePage.style.height)
 			}
 		}
 	}
@@ -70,7 +72,7 @@
 			max-width: 300px;
 		}
 		.carousel-text-max {
-			font-size: 20px;
+			font-size: 33px;
 			color: #FFFFFF;
 			text-align: center;
 			padding-bottom: 10px;
@@ -78,7 +80,7 @@
 		}
 		
 		.carousel-text-min {
-			font-size: 5px;
+			font-size: 20px;
 			color: #FFFFFF;
 			text-align: center;
 		}

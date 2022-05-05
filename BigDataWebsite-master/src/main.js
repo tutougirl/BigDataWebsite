@@ -8,6 +8,7 @@ import 'view-design/dist/styles/iview.css';
 import Animated from 'animate.css'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
+import 'default-passive-events'
 
 
 Vue.config.productionTip = false

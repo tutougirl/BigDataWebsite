@@ -3,9 +3,9 @@
 		<div class="move-icon" @click="drawer = true">
 			<i class="el-icon-s-operation"></i>
 		</div>
-		<div class="move-logo">
+		<!-- <div class="move-logo">
 			<img src="~assets/img/logo.png" />
-		</div>
+		</div> -->
 		<div class="move-icon"></div>
 		<el-drawer :custom-class="eldrawer" :show-close="false" :z-index="-1" :visible.sync="drawer" 
 			:direction="direction" :before-close="handleClose" :modal="false">
@@ -15,19 +15,34 @@
 			<div @click="product">产品中心</div>
 			<div @click="requirement">需求发布</div>
 			<div @click="about">关于我们</div>
+			<div @click="loadingForm" v-if="!loginFlag">登录</div>
+			<div @click="logout" v-if="loginFlag" >退出</div>
 		</el-drawer>
+		 <el-card
+				class="login-card"
+				v-show="loginCardVisible"
+			>
+		<!--      绑定script中data数据model="submitForm"-->
+				<login @son="getMes" :loginVis.sync="loginCardVisible"></login>
+		  </el-card>
 	</div>
 
 </template>
 
 <script>
+	import Login from '@/components/login/Login.vue'
 	export default {
 		name: "",
+		components:{
+			Login
+		},
 		data() {
 			return {
 				drawer: false,
 				direction: 'ttb',
 				eldrawer: 'eldrawer',
+				loginFlag:false,
+				loginCardVisible:false,
 			}
 		},
 		methods: {
@@ -51,6 +66,21 @@
 			},
 			about() {
 				this.$router.replace("/about")
+			},
+			getMes(mes){
+				this.loginFlag=mes;
+				this.dialogVisible=false;
+			},
+			loadingForm(){
+				this.loginCardVisible=true
+			},
+			logout(){
+				 this.$message({
+		      message: '退出登录成功！',
+		      type: 'success',
+					duration:'1000'
+		    });
+				this.loginFlag=false
 			},
 		}
 	}
@@ -96,8 +126,20 @@
 	}
 	.eldrawer{
 		background-color: var(--color-background);
-		min-height: 335px;
+		min-height: 300px;
 		padding-top: 35px;
 		text-align: center;
+	}
+	@media screen and (max-width:1000px) {
+			.login-card{
+				width: 300px;
+				height: 450px;
+				position: absolute;
+				top: 200px;
+				left: 50%;
+				margin-left: -150px;
+				border: 2px solid #313645;
+				border-radius: 20px;
+			}
 	}
 </style>

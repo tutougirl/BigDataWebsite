@@ -21,7 +21,7 @@
 		<!-- 合作伙伴 -->
 		<cooperate :scrollTop="scrollTop"/>
 		<!-- 加入我们 -->
-		<join-us />
+		<!-- <join-us /> -->
 		<!-- 底部页脚 -->
 		<page-footer></page-footer>
 	</div>

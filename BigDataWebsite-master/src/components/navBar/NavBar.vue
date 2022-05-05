@@ -2,7 +2,7 @@
  * @Author: he yan ying
  * @Date: 2021-11-23 16:19:47
  * @LastEditors: he yan ying
- * @LastEditTime: 2022-03-18 14:06:32
+ * @LastEditTime: 2022-04-29 16:02:36
  * @Description: 
 -->
 <template>
@@ -110,7 +110,7 @@
 	}
 	.login-card{
 		width: 400px;
-		height: 470px;
+		height: 450px;
 		position: absolute;
 		top: 90%;
 		left: 35%;

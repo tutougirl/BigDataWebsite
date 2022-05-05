@@ -2,14 +2,14 @@
  * @Author: he yan ying
  * @Date: 2022-01-12 10:29:47
  * @LastEditors: he yan ying
- * @LastEditTime: 2022-03-18 13:34:10
+ * @LastEditTime: 2022-05-05 10:51:31
  * @Description: 
 -->
 <template>
   <div class="regist-box">
 <!--      绑定script中data数据model="submitForm"-->
-<h1 style="text-align: right" @click="closeRegist">X</h1>
-<h1 class="title">注册</h1>
+<span style="float:right" @click="closeRegist">X</span>
+<span class="title">注册</span>
   <el-form :model="registForm"  ref="ruleForm" class="registForm">
       <el-form-item  prop="username">
         <!--  v-model  绑定data中数据"-->
@@ -86,12 +86,23 @@ export default {
 
 <style>
 .title{
+   margin-top: 30px;
+  font-size: 2rem;
   text-align: center;
+  display: block;
 }
 .registForm{
   display: flex;
   height: 100%;
   flex-direction: column;
   margin-top: 20px;
+}
+@media screen and (max-width:1000px) {
+  .title{
+    font-size: 1.5rem;
+  }
+  .regist-box{
+    width: 260px;
+  }
 }
 </style>

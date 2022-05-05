@@ -2,14 +2,14 @@
  * @Author: he yan ying
  * @Date: 2021-12-30 10:20:04
  * @LastEditors: he yan ying
- * @LastEditTime: 2022-03-18 13:37:18
+ * @LastEditTime: 2022-05-05 10:47:22
  * @Description: 
 -->
 <template> 
   <div class="login-box">
 <!--      绑定script中data数据model="submitForm"-->
-  <h1 style="text-align: right" @click="closeLogin">X</h1>
-  <h1 class="title">登陆</h1>
+  <span style="float:right"   @click="closeLogin">X</span>
+  <span class="title">登陆</span>
     <el-form :model="submitForm"  ref="ruleForm" class="loginForm">
       <el-form-item prop="username">
         <!--  v-model  绑定data中数据"-->
@@ -111,8 +111,10 @@
 
 <style>
 .title{
-  text-align: center;
   margin-top: 30px;
+  font-size: 2rem;
+  text-align: center;
+  display: block;
 }
 .loginForm{
   display: flex;
@@ -121,7 +123,7 @@
   margin-top: 60px;
 }
 .bot{
-  margin-top: 50px;
+  margin-top: 40px;
   display: flex;
 }
 .btn{
@@ -138,5 +140,22 @@
 		left: -5px;
 		border: 2px solid #313645;
   	border-radius: 20px;
-	}
+}
+@media screen and (max-width:1000px) {
+  .title{
+    font-size: 1.5rem;
+  }
+  .text{
+    font-size: 1rem;
+  }
+  .regist-card{
+		width: 320px;
+		height: 600px;
+		position: absolute;
+		top: -5px;
+		left: -5px;
+		border: 2px solid #313645;
+  	border-radius: 20px;
+}
+}
 </style>

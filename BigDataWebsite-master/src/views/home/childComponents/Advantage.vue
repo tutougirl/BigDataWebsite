@@ -23,8 +23,7 @@
 			<advantage-item class="down delayOne animate__animated" :class="{'animate__fadeInUp':scrollTop>200}">
 				<div slot="header-icon">
 						<svg class="icon" aria-hidden="true">
-						<use xlink:href="#icon-dashujufuwupingtai
-"></use>
+						<use xlink:href="#icon-dashujufuwupingtai"></use>
 					</svg>
 				</div>
 				<div slot="title-min">数据加工</div>
@@ -96,6 +95,11 @@
 		}
 		.animated{
 			max-width: 540px;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.animate__animated{
+			flex-basis:100px
 		}
 		.up{
 			max-width: 300px;

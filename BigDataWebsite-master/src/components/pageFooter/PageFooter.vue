@@ -2,28 +2,16 @@
 	<div class="footer">
 		<!-- up -->
 		<div class="footer-up">
-			<el-row :gutter="20">
-				<el-col :span="6">
-					<div class="img">
-						<img src="../../assets/img/home/logo-test.png" />
-					</div>
-				</el-col>
-				<el-col :span="6">
-					<div class="text">
+						<img class="img" src="../../assets/img/home/logo-test.png" />
+					<span class="text">
 						电话：18285137896
-					</div>
-				</el-col>
-				<el-col :span="6">
-					<div class="text">
+					</span>
+					<span class="text">
 						邮箱：zhzz@gzzhzz.com
-					</div>
-				</el-col>
-				<el-col :span="6">
-					<div class="text">
-						地址：贵州省贵阳市贵阳国家高新技术产业开发区长岭南路33号天一国际广场23栋1单元负1层3号、1层1-2号
-					</div>
-				</el-col>
-			</el-row>		
+					</span>
+					<span class="text">
+						地址：贵州省贵阳市贵阳国家高新区长岭南路33号天一国际广场23栋
+					</span>
 		</div>
 		<!-- down -->
 		<div class="footer-down">
@@ -49,7 +37,7 @@
 		background-color: #e9eff4;
 		max-width: 1920px;
 		margin: auto;
-		padding-top: 4px;
+		border-top: 40px solid #252B3A;
 	}
 	.footer-up{
 		width: 100%;
@@ -66,7 +54,9 @@
 		color: #FFFFFF;
 		padding: 10px 0;
 	}
-
+	.img{
+		margin-left: 15%;
+	}
 	.footer-up-right{
 		text-align: center;
 		margin: auto;
@@ -82,26 +72,28 @@
 		padding-top: 15px;
 		font-size: 18px;
 	}
-	  .el-row {
-	    margin-bottom: 1px;
-			width: 100%;
-	    &:last-child {
-	      margin-bottom: 0;
-	    }
-	  }
-	  .el-col {
-	    border-radius: 2px;
-	  }
 		.text{
 			font-size: 15px;
-			padding-top: 25px;
+			margin-top:35px;
+			margin-left:30px;
 		}
 		@media screen and (max-width:1000px) {
-			img{
-				width: 40%;
-				margin-left: 30%;
-				margin-top: 10px;
-				/* margin-bottom: 10px; */
+			.img{
+				width: 90px;
+				height: 80px;
+				margin-top: 20px;
+				margin-left:5%;
+			}
+			.footer{
+				height: 100%;
+			}
+			.footer-up{
+				overflow-x: scroll;
+			}
+			.text{
+				min-width: 180px;
+				margin-left:10px;
+				display: inline-block;
 			}
 		}
 		@media screen and (min-width:1000px) {

@@ -1,10 +1,3 @@
-<!--
- * @Author: he yan ying
- * @Date: 2022-01-10 11:28:13
- * @LastEditors: he yan ying
- * @LastEditTime: 2022-03-31 10:57:42
- * @Description: 
--->
 <template>
 	<div class="about">
 		
@@ -34,7 +27,12 @@
 				<div slot="title-max">联系我们
 				<el-divider style="color: #00AAFF;" content-position="center"></el-divider>
 				</div>
-				<div slot="text" class="textIn">
+				<div slot="text" class="textIn1">
+					<h3><i class="el-icon-phone-outline"></i>电话热线：18285137896</h3>
+					<h3><i class="el-icon-location-outline"></i>地址：贵州省贵阳市南山湖区长岭南路33号天一国际广场23栋</h3>
+					<h3><i class="el-icon-message"></i>邮箱：2158413506@QQ.com</h3>
+					<img class="wechat" src="./assets/qrcode.jpg">
+					<h3 style="margin-bottom: 20px;">官方微信</h3>
 				</div>
 			</advantage-item>
 			
@@ -93,14 +91,42 @@
 	.active{
 		margin: 30px 0;
 	}
-	.textIn{
+/* 	.textIn{
 		text-align: center;
 		margin-left: 10%;
 		width: 80%;
-	}
+	} */
 	/* .imgShow{
 		margin-top: 10;
 	} */
 	
-	
+	@media screen and (min-width:1000px) {
+		.textIn{
+			text-align: center;
+			margin-left: 10%;
+			width: 80%;
+		}
+		.textIn1{
+			display: none;
+		}
+	}
+	@media screen and (max-width:1000px) {
+		.textIn{
+/* 			text-align: center;
+			margin-left: 10%;
+			width: 80%; */
+			font-size: 14px;
+			text-align: justify;
+		}
+		.textIn1{
+			text-align: center;
+			margin-left: 10%;
+			width: 80%;
+			font-size: 14px;
+		}
+		.wechat{
+			margin-top: 20px;
+			width: 180px;
+		}
+	}
 </style>

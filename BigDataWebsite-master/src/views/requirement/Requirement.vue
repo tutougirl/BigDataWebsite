@@ -2,21 +2,18 @@
  * @Author: he yan ying
  * @Date: 2022-01-05 11:25:33
  * @LastEditors: he yan ying
- * @LastEditTime: 2022-03-18 14:01:40
+ * @LastEditTime: 2022-05-05 16:31:24
  * @Description: 
 -->
 <template>
-	<div class="introduction">
-		
+	<div class="requirement">
 		<!-- 页头 -->
-		<page-header :isShowMenu="isShowMenu" :englishText="chineseText" 
-			 :imgSrc="imgSrc"/>
+		<page-header :isShowMenu="isShowMenu" :englishText="chineseText" :imgSrc="imgSrc"/>
 		<div class="public-body" >
 			<div class="perference">
 			<h1 class="perference-title">{{title}}</h1>
 			<p class="perference-info">{{info}}</p>
 			<div class="perference-content">
-				<ul>
 					<li v-for="(item,index) of content" :key="index">
 						<div
 							class="perference-bg"
@@ -25,11 +22,10 @@
 						></div>
 						<p class="perference-bg-caption">{{item.caption}}</p>
 					</li>
-				</ul>
 			</div>
 			</div>
 			<div class="subform-bg">
-				 <el-form :model="subForm" status-icon :rules="rules" ref="subForm" label-width="100px" class="subForm">
+				 <el-form :model="subForm" status-icon :rules="rules" ref="subForm" label-width="80px" class="subForm">
 					<el-form-item label="公司" prop="company" class="label">
 						<el-input v-model="subForm.company" autocomplete="off"></el-input>
 					</el-form-item>
@@ -51,17 +47,20 @@
 				</div>
 			</div>
 		</div>
+			<!-- 底部页脚 -->
+		<page-footer></page-footer>
 	</div>
 </template>
 
 <script>
 	
 	import PageHeader from 'components/pageHeader/PageHeader.vue'
-	
+		import PageFooter from 'components/pageFooter/PageFooter.vue'
   export default{
     name:"Introduction",
 		components:{
 			PageHeader,
+			PageFooter
 		},
 		data() {
 			var validateEmail = (rule, value, callback) => {
@@ -184,9 +183,8 @@
 </script>
 
 <style scoped="scoped">
-	.active{
-		margin: 20px auto;
-	}
+
+
 	.public-body{
 		padding: 0;
 	}
@@ -217,24 +215,25 @@ h1 {
 .perference-bg-leave {
   animation: leave 400ms steps(25) both;
 }
-/* .perference-content {
-  overflow:hidden;
-} */
+.perference-content {
+	width: 1140px;
+	margin: 0 auto;
+}
 .perference-content::after {
   content: "";
   clear: both;
   display: block;
 }
-.perference-content ul {
+/* .perference-content ul {
   margin: 20px auto;
   width: 1200px;
-}
-.perference-content ul li {
+} */
+.perference-content  li {
   float: left;
   width: 160px;
 	list-style-type: none;
 }
-.perference-content ul li:hover {
+.perference-content  li:hover {
   font-weight: 700;
 }
 .perference-bg-caption {
@@ -246,28 +245,7 @@ h1 {
   margin-top: 10px;
   margin-bottom: 40px;
 }
-@keyframes enter {
-  0% {
-    background-position: 0 140px;
-  }
-  90% {
-    background-position: 0 3640px;
-  }
-  100% {
-    background-position: 0 3640px;
-  }
-}
-@keyframes leave {
-  0% {
-    background-position: 0 3640px;
-  }
-  90% {
-    background-position: 0 140px;
-  }
-  100% {
-    background-position: 0 140px;
-  }
-}
+
 .subform-bg{
 		position: relative;
 		width: 100%;
@@ -290,5 +268,37 @@ h1 {
 .btn{
 	margin-bottom: 80px;
 	margin-left: 50%;
+}
+
+@media screen and (max-width:1000px){
+	.perference-content {
+		width: 390px;
+		margin: 0 auto;
+	}
+
+	.perference-content  li {
+		float: left;
+		width: 52px;
+		list-style-type: none;
+	}
+	.perference-bg {
+		width: 60px;
+		height: 70px;
+		background-position:-5px 70px;
+		margin-left: 10px;
+	}
+	h1 {
+		font-size: 1.5rem;
+	}
+	.perference-bg-caption {
+		font-size: 10px;
+		width: 80px;
+	}
+	.subForm{
+		width: 350px;
+	}
+	.btn{
+		margin-left: 40%;
+	}
 }
 </style>
